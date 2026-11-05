@@ -30,6 +30,10 @@
 #include "HelpSystem.h"
 #include "Rand.h"
 
+// Milliseconds since the last frame, at most half a second.
+// BW1W120 005557e0 BW1M119 010caca0
+int GetAlexTimeInc();
+
 #if defined(VERSION_BW1W100) || defined(VERSION_BW1W110)
 #define HELPDUDE_SOURCE_FILE "C:\\dev\\Black\\helpdude.cpp"
 #else
