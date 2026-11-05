@@ -52,6 +52,11 @@ public:
 	void SendIAmHere(LHTransportInfo* transport_info);
 	// BW1W120 005ebd20 BW1M119 0137cbc0
 	int WaitUntilGameLoopStarted();
+	// BW1W120 005eb970 BW1M119 0137d250
+	static void UpdateUserData();
 };
+
+// BW1W120 005ea750 BW1M119 0137e980
+void RunWebPage(const char* url);
 
 #endif

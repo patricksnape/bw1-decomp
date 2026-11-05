@@ -320,6 +320,7 @@ struct SetupControl
 enum MSGBOXSTYLE
 {
 	MSGBOXSTYLE_SINGLE_BUTTON = 0,
+	MSGBOXSTYLE_YES_NO = 3,
 	MSGBOXSTYLE_NO_BUTTONS = 5,
 };
 
@@ -688,7 +689,7 @@ struct SetupMultiList : public SetupList
 struct SetupEdit : public SetupControl
 {
 	SetupList* field_0x23c;
-	int        field_0x240;
+	int        MaxLength; /* 0x240 */
 	int        field_0x244;
 	int        field_0x248;
 	int        CursorPosition;

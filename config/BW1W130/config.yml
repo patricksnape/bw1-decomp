@@ -7,6 +7,11 @@ splits: config/BW1W130/splits.txt
 generate_imports: true
 
 block_relocations:
+# MPFELogin::ControlCallback's 0xe0e0e0 box colour is an immediate, not a pointer.
+  - source: 0x00634B65
+  - source: 0x00634B6C
+  - source: 0x00634B83
+  - source: 0x00634B88
 # redbook_play's MCI_PLAY_PARMS::dwTo value 5100000 is an immediate, not a code pointer.
   - source: 0x006378AE
 # "tMM" of Version.cpp's LH_VERSION_END_TAG reads as a pointer into Creature::CanCreatureCastSpell.

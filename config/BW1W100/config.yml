@@ -6,6 +6,11 @@ symbols: config/BW1W100/symbols.txt
 splits: config/BW1W100/splits.txt
 
 block_relocations:
+# MPFELogin::ControlCallback's 0xe0e0e0 box colour is an immediate, not a pointer.
+  - source: 0x005E3C30
+  - source: 0x005E3C35
+  - source: 0x005E3C4C
+  - source: 0x005E3C51
 # libjpeg rgb_ycc_start's CBCR_OFFSET + ONE_HALF-1 (0x807fff) is an immediate, not a pointer into LH3DPrimitive::ComputeBoundingBox.
   - source: 0x007E6EC8
 # LH3DAtmos::Render3D's 0x7f7f7f colour mask and bias are immediates, not pointers into Swallow's vftable.
