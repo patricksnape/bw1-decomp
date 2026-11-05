@@ -320,6 +320,7 @@ struct SetupControl
 enum MSGBOXSTYLE
 {
 	MSGBOXSTYLE_SINGLE_BUTTON = 0,
+	MSGBOXSTYLE_OK_CANCEL = 1,
 	MSGBOXSTYLE_YES_NO = 3,
 	MSGBOXSTYLE_NO_BUTTONS = 5,
 };
@@ -364,7 +365,7 @@ struct SetupBox
 	int              HoldHeight;
 	int              DefaultTextSize;
 	void(__stdcall* Callback)(int message, SetupBox* box, SetupControl* control, int data1, int data2);
-	uint32_t      field_0xb4;
+	SetupControl* MessageText; /* 0xb4 */
 	unsigned long HoldData;
 	SetupControl* HoverWidget; /* 0xbc */
 	int           HoldColour;

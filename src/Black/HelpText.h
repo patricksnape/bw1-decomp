@@ -125,15 +125,17 @@ struct HelpTextDataBase
 		count = num_entries;
 		array = new (HELP_TEXT_FILEPATH, HELP_TEXT_INIT_LINE) HelpTextInfo[count];
 	}
-	// BW1W120 inlined BW1M119 010946e0
-	char16_t* GetHelpText(unsigned long index) const
+	// BW1W120 004707f0 BW1M119 01243920
+	HelpTextInfo* GetData(unsigned long index) const
 	{
 		if (index >= count)
 		{
 			index = 0;
 		}
-		return (index <= 0 ? array : &array[index])->Text;
+		return index <= 0 ? array : &array[index];
 	}
+	// BW1W120 inlined BW1M119 010946e0
+	char16_t* GetHelpText(unsigned long index) const { return GetData(index)->Text; }
 
 	// BW1W120 005ccf80 BW1M119 0135cce0
 	void SetData(int index, unsigned long id, HELP_TEXT_NARRATOR narrator, wchar_t* text, wchar_t* speech);

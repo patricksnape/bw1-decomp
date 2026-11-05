@@ -129,6 +129,9 @@ public:
 	LH_USER_ID                          LastJoinUserID;                                    /* 0x108 */
 	LHLinkedList<LHLobbyServerChannel*> ServerChannels;                                    /* 0x10c */
 
+	// BW1W120 10068b60 BW1M119 013566d8 (LHCombined Release)
+	static bool32_t SendFullChecksum;
+
 #ifdef _LH_MULTIPLAYER_LIB_
 	// BW1W120 10068b48 BW1M119 013566c0 (LHCombined Release)
 	static bool GameRunning;
@@ -142,8 +145,6 @@ public:
 	static LH_MGJ_CALLBACK_RETURN (*MGJCallback)(void* param);
 	// BW1W120 10068b5c BW1M119 013566d4 (LHCombined Release)
 	static LH_OPERATING_MODE MessageServerMode;
-	// BW1W120 10068b60 BW1M119 013566d8 (LHCombined Release)
-	static bool32_t SendFullChecksum;
 	// BW1W120 10068b64 BW1M119 013566dc (LHCombined Release)
 	static bool32_t RunMessageServerOnThisHost;
 	// BW1W120 10068b68 BW1M119 013566e0 (LHCombined Release)

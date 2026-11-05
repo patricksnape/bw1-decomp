@@ -1168,7 +1168,7 @@ config.libs = [
             GameCodeObject(NonMatching, "Black/MPFEChannelData.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEChannelMessages.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEChannelSelector.cpp"),
-            GameCodeObject(NonMatching, "Black/MPFEChooseConnection.cpp"),
+            GameCodeObject(Matching, "Black/MPFEChooseConnection.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanDetails.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanList.cpp"),
             GameCodeObject(MatchingFor("BW1W120", "BW1W130"), "Black/MPFEConditionMessages.cpp", pch=False),
