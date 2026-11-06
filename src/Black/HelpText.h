@@ -20,6 +20,12 @@
 #define HELP_TEXT_INIT_LINE 93
 #endif
 
+#ifdef VERSION_BW1WCI
+#define CREATURE_ISLE_HELP_TEXTS 0
+#else
+#define CREATURE_ISLE_HELP_TEXTS 18
+#endif
+
 class HelpSystem;
 
 class HelpText : public Base

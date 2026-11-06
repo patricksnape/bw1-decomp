@@ -42,12 +42,6 @@
 #define MPFE_CLAN_DETAILS_LINE(line) ((line) - ((line) < 200 ? 3 : (line) < 264 ? 14 : 25))
 #endif
 
-#ifdef VERSION_BW1WCI
-#define CREATURE_ISLE_HELP_TEXTS 0
-#else
-#define CREATURE_ISLE_HELP_TEXTS 18
-#endif
-
 void MPFEClanDetails::Refresh()
 {
 	if (!Queried && !Querying)

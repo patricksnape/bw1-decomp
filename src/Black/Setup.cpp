@@ -151,12 +151,6 @@
 
 #define NO_OFFSET (*(const MapCoords*)NULL)
 
-#ifdef VERSION_BW1WCI
-#define CREATURE_ISLE_HELP_TEXTS 0
-#else
-#define CREATURE_ISLE_HELP_TEXTS 18
-#endif
-
 #define MPM_3P_1_CAPPED_TOWN_ID  3
 #define MPM_3P_1_TOWN_BELIEF_CAP 2.0f
 
