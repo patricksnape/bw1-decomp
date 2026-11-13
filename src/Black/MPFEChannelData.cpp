@@ -1035,13 +1035,20 @@ void MPFEData::D_PlayerLeft(LH_USER_ID id, wchar_t* name)
 			}
 		}
 	}
-	if (!found && UnassignedPlayers.Contains(player))
+	if (!found)
 	{
-		UnassignedPlayers.Remove(player);
+		for (LHLinkedListIterator<MPFEPlayerDetails*> it = UnassignedPlayers.GetStart(); it; it++)
+		{
+			if (it.Get() == player)
+			{
+				UnassignedPlayers.Remove(player);
+				break;
+			}
+		}
 	}
-	for (LHLinkedNode<MPFEInviteDetails*>* node = Invites.GetStart(); node != NULL; node = node->next.Get())
+	for (LHLinkedListIterator<MPFEInviteDetails*> it = Invites.GetStart(); it; it++)
 	{
-		MPFEInviteDetails* invite = node->payload;
+		MPFEInviteDetails* invite = it.Get();
 		if (invite != NULL && wcscmp(invite->Name, player->GetName()) == 0)
 		{
 			Invites.Remove(invite);
@@ -1083,11 +1090,11 @@ void MPFEData::D_PlayerLeft(LH_USER_ID id, wchar_t* name)
 	}
 	if (player->IsTeamLeader)
 	{
-		for (LHLinkedNode<TeamEnums*>* node = Data.TeamJoinRequests.GetStart(); node != NULL; node = node->next.Get())
+		for (LHLinkedListIterator<TeamEnums*> it = Data.TeamJoinRequests.GetStart(); it; it++)
 		{
-			if (player->Team == *node->payload)
+			if (player->Team == *it.Get())
 			{
-				Data.TeamJoinRequests.Remove(node->payload);
+				Data.TeamJoinRequests.Remove(it.Get());
 				break;
 			}
 		}
