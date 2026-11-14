@@ -8,11 +8,6 @@
 #include "LandscapeDetails.h" /* For struct LandscapeDetails */
 #include "LHNetBase.h"        /* For LHNetBase::Instance */
 
-// Two statics that nothing references keep their slots in the original's .bss. Their names are not known: cl6
-// orders this unit's .bss by a hash of the names, and these two sort where the original's did.
-static uint32_t unknown;
-static uint32_t unreferenced;
-
 LHLinkedList<LandscapeDetails*> MPFEDatabase::Landscapes;
 DBInfo                          MPFEDatabase::Query;
 

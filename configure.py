@@ -324,9 +324,6 @@ if config.version == "BW1W100":
     # comdlg32 import thunks only it calls.
     for _dead_function in ["_GetSaveFileNameA@4", "_GetOpenFileNameA@4"]:
         config.base_ldflags.append(f"/alternatename:{_dead_function}=_abort")
-    # Nothing calls MPFEChannelSelector's SelectChannel in 1.00; /OPT:REF dropped it and
-    # the wcsncmp only it calls.
-    config.base_ldflags.append("/alternatename:_wcsncmp=_abort")
 # LHLogR.dll's project links without /DEBUG: unlike LHAudio (but for Creature
 # Isle's, below), LHMultiplayer, LHDialog (and runblack from 1.10 on) it has no
 # debug directory in any version. Without /DEBUG, link.exe (6.0 and VS.NET 2002's
@@ -1225,7 +1222,7 @@ config.libs = [
             GameCodeObject(Matching, "Black/MPFEChannelData.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelDetails.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelMessages.cpp"),
-            GameCodeObject(Matching, "Black/MPFEChannelSelector.cpp"),
+            GameCodeObject(NonMatching, "Black/MPFEChannelSelector.cpp"),
             GameCodeObject(Matching, "Black/MPFEChooseConnection.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanDetails.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanList.cpp"),
@@ -1234,13 +1231,13 @@ config.libs = [
             GameCodeObject(NonMatching, "Black/MPFEConnectionStatus.cpp", pch=PCHExceptNoStringIn("BW1W130")),
             GameCodeObject(NonMatching, "Black/MPFECreateGame.cpp"),
             GameCodeObject(Matching, "Black/MPFECreatureDownload.cpp", pch=False),
-            GameCodeObject(Matching, "Black/MPFEDatabase.cpp", pch=False),
+            GameCodeObject(NonMatching, "Black/MPFEDatabase.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFEDatabaseID.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEDisconnectNowMessage.cpp"),
             GameCodeObject(Matching, "Black/MPFEDownloads.cpp"),
             GameCodeObject(Matching, "Black/MPFEFileTransfer.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFEFileTransferMessage.cpp"),
-            GameCodeObject(Matching, "Black/MPFEFindGame.cpp"),
+            GameCodeObject(NonMatching, "Black/MPFEFindGame.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEGameStartMessages.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFEHasCreature.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEInviteToTeamMessage.cpp"),

@@ -27,9 +27,6 @@ static void InternetPressed(SetupBox* box, SetupControl* control);
 
 MPFEFindGame MPFEFindGame::Instance;
 
-// A static that nothing references keeps its slot ahead of Instance's guard in the original's .bss. Its name is not known.
-static uint32_t unreferenced;
-
 MPFEFindGame::MPFEFindGame()
 {
 	BackButton = NULL;
