@@ -1958,7 +1958,8 @@ void LayerCommunication::BeginPlayerEnumeration() {}
 void LayerCommunication::Process() {}
 
 #if defined(VERSION_BW1WCI)
-void MPFEData::fn_0063D610() {}
+// BW1WCI 0063d610 BW1MCI119 null
+void fn_0063D610() {}
 #endif
 
 uint64_t MPFEData::InfoFileChecksum2 = 0;
