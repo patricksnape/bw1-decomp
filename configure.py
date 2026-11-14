@@ -1237,7 +1237,7 @@ config.libs = [
             GameCodeObject(Matching, "Black/MPFEDownloads.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEFileTransfer.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEFileTransferMessage.cpp"),
-            GameCodeObject(NonMatching, "Black/MPFEFindGame.cpp"),
+            GameCodeObject(Matching, "Black/MPFEFindGame.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEGameStartMessages.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFEHasCreature.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEInviteToTeamMessage.cpp"),

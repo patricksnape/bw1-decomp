@@ -27,6 +27,9 @@ static void InternetPressed(SetupBox* box, SetupControl* control);
 
 MPFEFindGame MPFEFindGame::Instance;
 
+// A static that nothing references keeps its slot ahead of Instance's guard in the original's .bss. Its name is not known.
+static uint32_t unreferenced;
+
 MPFEFindGame::MPFEFindGame()
 {
 	BackButton = NULL;
@@ -124,7 +127,11 @@ void MPFEFindGame::Destroy() {}
 
 void MPFEFindGame::InitControls()
 {
+#if defined(VERSION_BW1WCI)
+	wcscpy(Text->label, HelpTextDataBase::HelpTextDatabase.GetHelpText(HELP_TEXT_MPFE_FG_CI_TITLE));
+#else
 	wcscpy(Text->label, HelpTextDataBase::HelpTextDatabase.GetHelpText(HELP_TEXT_DIALOG_ADDITION_56));
+#endif
 	wcscpy(BackButton->label, HelpTextDataBase::HelpTextDatabase.GetHelpText(HELP_TEXT_DIALOG_BACK));
 	wcscpy(InternetCheckBox->label, HelpTextDataBase::HelpTextDatabase.GetHelpText(HELP_TEXT_DIALOG_ADDITION_104));
 	wcscpy(LanCheckBox->label, HelpTextDataBase::HelpTextDatabase.GetHelpText(HELP_TEXT_DIALOG_ADDITION_105));
