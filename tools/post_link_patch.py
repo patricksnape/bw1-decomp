@@ -983,6 +983,7 @@ BW1W120_SAFEDISC_CALLS = (
     (0x0062E50B, call_rel32(0x004017F9)),  # MPFEDatabase
     (0x0062E55B, call_rel32(0x004017F9)),  # MPFEDownloads
     (0x0062EADB, call_rel32(0x004017F9)),  # MPFEDownloads
+    (0x0062F51B, call_rel32(0x004017F9)),  # MPFEFindGame
     (0x0062FABB, call_rel32(0x004017F9)),  # MPFEGameStartMessages
     (0x0062FB0B, call_rel32(0x004017F9)),  # MPFEGameStartMessages
     (0x0063010B, call_rel32(0x004017F9)),  # MPFEGameStartMessages
@@ -2221,6 +2222,14 @@ BW1W130_SAFEDISC_CALLS = (
     (0x006327DB, jmp_run(0x00632718)),  # MPFEDownloads
     (0x0063285A, jmp_run(0x006327DB)),  # MPFEDownloads
     (0x00632893, jmp_run(0x0063285A)),  # MPFEDownloads
+    (0x0063321B, jmp_run(0x00633191)),  # MPFEFindGame
+    (0x00633245, copy_run(0x0063321B)),  # MPFEFindGame
+    (0x006332E7, copy_run(0x00633243)),  # MPFEFindGame
+    (0x0063334A, copy_run(0x006332E7)),  # MPFEFindGame
+    (0x00633512, jmp_run(0x0063334A)),  # MPFEFindGame
+    (0x00633559, jmp_run(0x00633512)),  # MPFEFindGame
+    (0x00633587, copy_run(0x00633559)),  # MPFEFindGame
+    (0x006336D9, jmp_run(0x00633587)),  # MPFEFindGame
     (0x006341FB, jmp_run(0x006341A9)),  # MPFELogin
     (0x00634225, copy_run(0x006341FB)),  # MPFELogin
     (0x0063430A, copy_run(0x00634223)),  # MPFELogin
