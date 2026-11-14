@@ -1676,6 +1676,8 @@ Black/MPFEChannelMessages.cpp:
 
 Black/MPFEChannelSelector.cpp:
 	.text       start:0x0063EC70 end:0x00641650
+	.rdata      start:0x00988960 end:0x009889B8
+	.rdata$r    start:0x00A22F18 end:0x00A22FB8
 	.CRT$XCU    start:0x00A36B34 end:0x00A36B44 align:4
 	.data       start:0x00C65710 end:0x00C657D0
 	.bss        start:0x00DC1AA0 end:0x00DC1B70

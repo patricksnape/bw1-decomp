@@ -118,7 +118,9 @@ static bool ChannelNameChanged = false;
 static bool ChannelSelected = false;
 static bool JoinPending = false;
 static bool FilterChanged = false;
-bool        MPFEChooseConnection::AskedForIPAddress = false;
+// A zero-initialised static that nothing references keeps its slot here in the original's .bss. Its name is not known.
+static uint32_t unreferenced = 0;
+bool            MPFEChooseConnection::AskedForIPAddress = false;
 
 MPFEChannelSelector MPFEChannelSelector::Instance;
 
