@@ -738,11 +738,6 @@ def PrecompiledHeader(header, source, forced=True):
 
 gamecode_pch = PrecompiledHeader("BlackPCH.h", "src/Black/BlackPCH.cpp")
 
-# BlackPCH.h with LH3DLib's EighthScale and PI_OVER_2 defined ahead of it, for a game-code object's
-# `pch`: the units whose targets hold the two statics as a precompiled header's (initialised first,
-# laid out in .bss at their first use, docs/msvc6_pch.md).
-gamecode_lh3d_constants_pch = PrecompiledHeader("BlackLH3DConstantsPCH.h", "src/Black/BlackLH3DConstantsPCH.cpp")
-
 
 # For a game-code object's `pch`: the precompiled header, except in the versions named, in
 # which the unit's target has no <string> while ours brings it in through GameThingWithPos.h
@@ -1234,7 +1229,7 @@ config.libs = [
             GameCodeObject(Matching, "Black/MPFEChannelMessages.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelSelector.cpp"),
             GameCodeObject(Matching, "Black/MPFEChooseConnection.cpp"),
-            GameCodeObject(Matching, "Black/MPFEClanDetails.cpp", pch=gamecode_lh3d_constants_pch),
+            GameCodeObject(Matching, "Black/MPFEClanDetails.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanList.cpp"),
             GameCodeObject(Matching, "Black/MPFEConditionMessages.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFECondtionUpdateMessage.cpp"),
@@ -1248,7 +1243,7 @@ config.libs = [
             GameCodeObject(Matching, "Black/MPFEFileTransfer.cpp", pch=False),
             GameCodeObject(NonMatching, "Black/MPFEFileTransferMessage.cpp"),
             GameCodeObject(Matching, "Black/MPFEFindGame.cpp"),
-            GameCodeObject(Matching, "Black/MPFEGameStartMessages.cpp", pch=gamecode_lh3d_constants_pch),
+            GameCodeObject(Matching, "Black/MPFEGameStartMessages.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEHasCreature.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEInviteToTeamMessage.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEKickMessage.cpp"),

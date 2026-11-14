@@ -24,7 +24,10 @@
 
 #include <Lionhead/LHLib/ver5.0/LHOrderedLinkedList.h> /* For LHOrderedLinkedListIterator */
 
-#include "PrecompiledConstantAccessors.h" /* For CellSize, PI_OVER_2, EighthScale */
+#include "MapCoordsMeters.h" /* For MetresPerMapCell */
+
+#include <Lionhead/LH3DLib/development/LH3DMathConstants.h>  /* For PI_OVER_2 */
+#include <Lionhead/LH3DLib/development/LH3DScaleConstants.h> /* For EighthScale */
 
 #include "ColourConstants.h"   /* For White */
 #include "GameTimeConstants.h" /* For SecondsPerYear */
