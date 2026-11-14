@@ -7,4 +7,14 @@ const float PI = 3.14159265358979323846f;
 // "std". "HALF_PI" sorts ahead of "std". Renaming it will move it: re-check both units' .bss first.
 static float PI_OVER_2 = PI * 0.5f;
 
+#elif !defined(BW1_DECOMP_LH3D_MATH_CONSTANTS_USED)
+#define BW1_DECOMP_LH3D_MATH_CONSTANTS_USED
+
+// A unit built with a precompiled header that defines PI_OVER_2 holds it only if it uses it.
+// fabricated: stands in for the unknown uncalled header inline through which those units use it.
+inline float UsePiOver2()
+{
+	return PI_OVER_2;
+}
+
 #endif /* BW1_DECOMP_LH3D_MATH_CONSTANTS_INCLUDED_H */
