@@ -350,6 +350,10 @@ public:
 #endif
 	// BW1W120 00626490 BW1M119 01399b50
 	void D_UpdateBoxClans();
+#if defined(VERSION_BW1WCI)
+	// BW1WCI 0063d610 BW1MCI119 null
+	void fn_0063D610();
+#endif
 #ifndef VERSION_BW1W100
 	// BW1W120 00624170 BW1M119 null
 	void D_UpdateBoxCaption();

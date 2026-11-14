@@ -1222,7 +1222,7 @@ config.libs = [
             GameCodeObject(NonMatching, "Black/MPFEChangeClanRequest.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEChangedMapMessage.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEChangedTeamRequestMessage.cpp"),
-            GameCodeObject(NonMatching, "Black/MPFEChannelData.cpp"),
+            GameCodeObject(Matching, "Black/MPFEChannelData.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelDetails.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelMessages.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelSelector.cpp"),
