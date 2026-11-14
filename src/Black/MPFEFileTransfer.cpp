@@ -97,6 +97,7 @@ void MPFEFileTransfer::Process()
 	}
 
 	char chunk[MPFE_FILE_TRANSFER_CHUNK_SIZE + 1];
+	// The original swaps memset's size and value (Mac: memset(chunk, 0x191, 0)), so nothing is cleared.
 	memset(chunk, sizeof(chunk), 0);
 	int length = min(MPFE_FILE_TRANSFER_CHUNK_SIZE, strlen(SendText + SentLength));
 	chunk[length] = '\0';
