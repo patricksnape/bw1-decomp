@@ -970,6 +970,14 @@ BW1W120_SAFEDISC_CALLS = (
     (0x0062137A, call_indirect(0x008A97DC)),  # MPFEAlexDialog
     (0x0062141A, call_indirect(0x008A9590)),  # MPFEAlexDialog
     (0x0062241B, call_rel32(0x004017F9)),  # MPFEAlexDialog
+    (0x0062248B, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x006227BB, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x00622C5B, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x00622FEB, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x0062397B, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x0062415B, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x00624DDB, call_rel32(0x004017F9)),  # MPFEChannelData
+    (0x0062587B, call_rel32(0x004017F9)),  # MPFEChannelData
     (0x006266BB, call_rel32(0x004017F9)),  # MPFEChannelDetails
     (0x006269CB, call_rel32(0x004017F9)),  # MPFEChannelMessages
     (0x0062797B, call_rel32(0x004017F9)),  # MPFEChannelMessages
@@ -2161,6 +2169,53 @@ BW1W130_SAFEDISC_CALLS = (
     (0x006260E4, copy_run(0x00625DE4)),  # MPFEAlexDialog
     (0x0062611B, jmp_run(0x006260E4)),  # MPFEAlexDialog
     (0x00626137, jmp_run(0x0062611B)),  # MPFEAlexDialog
+    (0x0062618B, copy_run(0x0061A357)),  # MPFEChannelData
+    (0x006261B5, jmp_run(0x0062618B)),  # MPFEChannelData
+    (0x006264BB, jmp_run(0x006261B3)),  # MPFEChannelData
+    (0x00626753, jmp_run(0x006264BB)),  # MPFEChannelData
+    (0x00626824, copy_run(0x00626753)),  # MPFEChannelData
+    (0x0062695B, jmp_run(0x00626824)),  # MPFEChannelData
+    (0x006269F8, jmp_run(0x0062695B)),  # MPFEChannelData
+    (0x00626A39, jmp_run(0x006269F8)),  # MPFEChannelData
+    (0x00626A57, jmp_run(0x00626A39)),  # MPFEChannelData
+    (0x00626B53, jmp_run(0x00626A57)),  # MPFEChannelData
+    (0x00626BD9, jmp_run(0x00626B53)),  # MPFEChannelData
+    (0x00626C16, jmp_run(0x00626BD9)),  # MPFEChannelData
+    (0x00626CEB, copy_run(0x00402CB0)),  # MPFEChannelData
+    (0x00626E7A, jmp_run(0x00626CEB)),  # MPFEChannelData
+    (0x00626EF3, jmp_run(0x00626E7A)),  # MPFEChannelData
+    (0x00627001, copy_run(0x00626EF3)),  # MPFEChannelData
+    (0x00627163, copy_run(0x00626FC6)),  # MPFEChannelData
+    (0x00627604, copy_run(0x00627163)),  # MPFEChannelData
+    (0x00627655, jmp_run(0x00627604)),  # MPFEChannelData
+    (0x0062767B, jmp_run(0x00627655)),  # MPFEChannelData
+    (0x00627696, jmp_run(0x0062767B)),  # MPFEChannelData
+    (0x00627DE9, copy_run(0x00627696)),  # MPFEChannelData
+    (0x00627EE3, copy_run(0x00627DE9)),  # MPFEChannelData
+    (0x00628193, jmp_run(0x00627EE3)),  # MPFEChannelData
+    (0x00628847, copy_run(0x005FBEE4)),  # MPFEChannelData
+    (0x00628ADB, jmp_run(0x00628847)),  # MPFEChannelData
+    (0x00628B5A, jmp_run(0x00628ADB)),  # MPFEChannelData
+    (0x00628BC8, copy_run(0x00628B5A)),  # MPFEChannelData
+    (0x00628E45, copy_run(0x00628BC8)),  # MPFEChannelData
+    (0x00628E87, copy_run(0x00628D66)),  # MPFEChannelData
+    (0x00628ED2, jmp_run(0x00628E87)),  # MPFEChannelData
+    (0x00628F67, copy_run(0x00628ED2)),  # MPFEChannelData
+    (0x00629036, jmp_run(0x00628F67)),  # MPFEChannelData
+    (0x006290CA, copy_run(0x004119AE)),  # MPFEChannelData
+    (0x0062957B, jmp_run(0x006290CA)),  # MPFEChannelData
+    (0x00629A28, copy_run(0x004015AB)),  # MPFEChannelData
+    (0x00629D33, jmp_run(0x00629A28)),  # MPFEChannelData
+    (0x00629D75, jmp_run(0x00629D33)),  # MPFEChannelData
+    (0x00629DC8, copy_run(0x00526FC6)),  # MPFEChannelData
+    (0x00629E01, copy_run(0x00629DC8)),  # MPFEChannelData
+    (0x00629E32, jmp_run(0x00629E01)),  # MPFEChannelData
+    (0x00629E72, jmp_run(0x00629E32)),  # MPFEChannelData
+    (0x00629EAA, copy_run(0x00629E72)),  # MPFEChannelData
+    (0x00629EDA, jmp_run(0x00629EAA)),  # MPFEChannelData
+    (0x00629F23, copy_run(0x00629EDA)),  # MPFEChannelData
+    (0x0062A34A, copy_run(0x00629F23)),  # MPFEChannelData
+    (0x0062A362, copy_run(0x00401C45)),  # MPFEChannelData
     (0x0062A3BB, jmp_run(0x0062A362)),  # MPFEChannelDetails
     (0x0062A3E5, copy_run(0x0062A3BB)),  # MPFEChannelDetails
     (0x0062A678, jmp_run(0x0062A3E3)),  # MPFEChannelDetails

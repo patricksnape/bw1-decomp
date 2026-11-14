@@ -1524,6 +1524,7 @@ Black/MPFEAlexDialog.cpp:
 Black/MPFEChannelData.cpp:
 	.text       start:0x005D8410 end:0x005DBAA0
 	.rdata      start:0x0086DF70 end:0x0086DF90
+	.rdata$r    start:0x008E5A10 end:0x008E5A78
 	.CRT$XCU    start:0x008F6A88 end:0x008F6A94 align:4
 	.data       start:0x00B210A8 end:0x00B2113C
 	.bss        start:0x00C5FF20 end:0x00C616A0
