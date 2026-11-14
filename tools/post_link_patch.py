@@ -979,6 +979,8 @@ BW1W120_SAFEDISC_CALLS = (
     (0x0062C6FB, call_rel32(0x004017F9)),  # MPFEConditionMessages
     (0x0062DB2B, call_rel32(0x004017F9)),  # MPFECreatureDownload
     (0x0062DB4B, call_rel32(0x004017F9)),  # MPFECreatureDownload
+    (0x0062DFDB, call_rel32(0x004017F9)),  # MPFEDatabase
+    (0x0062E50B, call_rel32(0x004017F9)),  # MPFEDatabase
     (0x0062E55B, call_rel32(0x004017F9)),  # MPFEDownloads
     (0x0062EADB, call_rel32(0x004017F9)),  # MPFEDownloads
     (0x0062FABB, call_rel32(0x004017F9)),  # MPFEGameStartMessages
@@ -2199,6 +2201,16 @@ BW1W130_SAFEDISC_CALLS = (
     (0x00631971, jmp_run(0x00631924)),  # MPFECreatureDownload
     (0x006319E6, copy_run(0x00631971)),  # MPFECreatureDownload
     (0x00631C81, copy_run(0x006319E6)),  # MPFECreatureDownload
+    (0x00631CDB, jmp_run(0x00631C81)),  # MPFEDatabase
+    (0x00631D25, copy_run(0x00631CDB)),  # MPFEDatabase
+    (0x00631DF6, jmp_run(0x00631D25)),  # MPFEDatabase
+    # jmp_run(0x00631DF6), whose copy holds a `jmp [slot]` that SafeDisc marked as well (81 25).
+    (0x00631EF3, padding_bytes(bytes.fromhex('00b9601edc008125e9f6feffff'))),  # MPFEDatabase
+    (0x00631F62, copy_run(0x00631EF3)),  # MPFEDatabase
+    (0x00631F99, jmp_run(0x00631F62)),  # MPFEDatabase
+    (0x006321E1, copy_run(0x00631F99)),  # MPFEDatabase
+    (0x0063220B, copy_run(0x006321E1)),  # MPFEDatabase
+    (0x00632233, jmp_run(0x0063220B)),  # MPFEDatabase
     (0x0063225B, jmp_run(0x00632233)),  # MPFEDownloads
     (0x00632276, jmp_run(0x0063225B)),  # MPFEDownloads
     (0x006322B7, jmp_run(0x00632276)),  # MPFEDownloads

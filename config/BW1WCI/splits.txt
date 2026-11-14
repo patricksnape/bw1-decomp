@@ -1712,16 +1712,17 @@ Black/MPFECreatureDownload.cpp:
 Black/MPFEDatabase.cpp:
 	.text       start:0x00644210 end:0x00644790
 	.rdata      start:0x00988A34 end:0x00988A40
+	.rdata$r    start:0x00A230F8 end:0x00A2313C
 	.CRT$XCU    start:0x00A36B84 end:0x00A36B90 align:4
-	.data       start:0x00C6E410 end:0x00C6E450
-	.bss        start:0x00DC2020 end:0x00DC208C
+	.data       start:0x00C6E410 end:0x00C6E43C
+	.bss        start:0x00DC2020 end:0x00DC2088
 
 Black/MPFEDownloads.cpp:
 	.text       start:0x00644790 end:0x00644DF0
 	.rdata      start:0x00988A40 end:0x00988A7C
 	.rdata$r    start:0x00A2313C end:0x00A231F0
 	.CRT$XCU    start:0x00A36B90 end:0x00A36B94 align:4
-	.data       start:0x00C6E450 end:0x00C6E488
+	.data       start:0x00C6E43C end:0x00C6E488
 	.bss        start:0x00DC208C end:0x00DC2090
 
 Black/MPFEFileTransfer.cpp:
