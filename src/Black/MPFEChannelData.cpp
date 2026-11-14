@@ -1959,6 +1959,7 @@ void LayerCommunication::Process() {}
 
 #if defined(VERSION_BW1WCI)
 // BW1WCI 0063d610 BW1MCI119 null
+// Real emitted empty function; nothing calls it and the Mac Creature Isle build has none, so its name is unrecovered.
 void fn_0063D610() {}
 #endif
 
