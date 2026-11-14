@@ -324,6 +324,9 @@ if config.version == "BW1W100":
     # comdlg32 import thunks only it calls.
     for _dead_function in ["_GetSaveFileNameA@4", "_GetOpenFileNameA@4"]:
         config.base_ldflags.append(f"/alternatename:{_dead_function}=_abort")
+    # Nothing calls MPFEChannelSelector's SelectChannel in 1.00; /OPT:REF dropped it and
+    # the wcsncmp only it calls.
+    config.base_ldflags.append("/alternatename:_wcsncmp=_abort")
 # LHLogR.dll's project links without /DEBUG: unlike LHAudio (but for Creature
 # Isle's, below), LHMultiplayer, LHDialog (and runblack from 1.10 on) it has no
 # debug directory in any version. Without /DEBUG, link.exe (6.0 and VS.NET 2002's
@@ -1222,7 +1225,7 @@ config.libs = [
             GameCodeObject(NonMatching, "Black/MPFEChannelData.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelDetails.cpp"),
             GameCodeObject(Matching, "Black/MPFEChannelMessages.cpp"),
-            GameCodeObject(NonMatching, "Black/MPFEChannelSelector.cpp"),
+            GameCodeObject(Matching, "Black/MPFEChannelSelector.cpp"),
             GameCodeObject(Matching, "Black/MPFEChooseConnection.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanDetails.cpp"),
             GameCodeObject(NonMatching, "Black/MPFEClanList.cpp"),

@@ -973,6 +973,9 @@ BW1W120_SAFEDISC_CALLS = (
     (0x006266BB, call_rel32(0x004017F9)),  # MPFEChannelDetails
     (0x006269CB, call_rel32(0x004017F9)),  # MPFEChannelMessages
     (0x0062797B, call_rel32(0x004017F9)),  # MPFEChannelMessages
+    (0x006282AB, call_rel32(0x004017F9)),  # MPFEChannelSelector
+    (0x0062A1DB, call_rel32(0x004017F9)),  # MPFEChannelSelector
+    (0x0062A2BB, call_rel32(0x004017F9)),  # MPFEChannelSelector
     (0x0062AC4B, call_rel32(0x004017F9)),  # MPFEChooseConnection
     (0x0062B8BB, call_rel32(0x004017F9)),  # MPFEChooseConnection
     (0x0062C6AB, call_rel32(0x004017F9)),  # MPFEConditionMessages
@@ -2182,6 +2185,28 @@ BW1W130_SAFEDISC_CALLS = (
     (0x0062BD01, copy_run(0x0062BC73)),  # MPFEChannelMessages
     (0x0062BD89, copy_run(0x0062BD01)),  # MPFEChannelMessages
     (0x0062BF52, jmp_run(0x0062BD89)),  # MPFEChannelMessages
+    (0x0062BFAB, copy_run(0x0041451F)),  # MPFEChannelSelector
+    (0x0062BFD5, jmp_run(0x0062BFAB)),  # MPFEChannelSelector
+    (0x0062C071, jmp_run(0x0062BFD3)),  # MPFEChannelSelector
+    (0x0062C0D8, jmp_run(0x0062C071)),  # MPFEChannelSelector
+    (0x0062C8F3, jmp_run(0x0062C0D8)),  # MPFEChannelSelector
+    (0x0062CAE1, copy_run(0x0062C8F3)),  # MPFEChannelSelector
+    (0x0062CB21, copy_run(0x0062CAE1)),  # MPFEChannelSelector
+    (0x0062D4A3, copy_run(0x0062CB21)),  # MPFEChannelSelector
+    (0x0062D6BB, jmp_run(0x0062D4A3)),  # MPFEChannelSelector
+    (0x0062D845, copy_run(0x0062D6A2)),  # MPFEChannelSelector
+    (0x0062D948, copy_run(0x0062D845)),  # MPFEChannelSelector
+    (0x0062DDF2, jmp_run(0x0062D948)),  # MPFEChannelSelector
+    (0x0062DEDB, jmp_run(0x0062DDF2)),  # MPFEChannelSelector
+    (0x0062DF17, jmp_run(0x0062DEDB)),  # MPFEChannelSelector
+    (0x0062DF57, jmp_run(0x0062DF17)),  # MPFEChannelSelector
+    (0x0062DFBB, jmp_run(0x0062DF57)),  # MPFEChannelSelector
+    (0x0062E06A, copy_run(0x0062DFBB)),  # MPFEChannelSelector
+    (0x0062E328, copy_run(0x0062E06A)),  # MPFEChannelSelector
+    (0x0062E774, jmp_run(0x0062E328)),  # MPFEChannelSelector
+    (0x0062E791, jmp_run(0x0062E774)),  # MPFEChannelSelector
+    (0x0062E7B1, jmp_run(0x0062E791)),  # MPFEChannelSelector
+    (0x0062E801, copy_run(0x0062E7B1)),  # MPFEChannelSelector
     (0x0062E94F, copy_run(0x0062E94B)),  # MPFEChooseConnection
     (0x0062E975, jmp_run(0x0062E94B)),  # MPFEChooseConnection
     (0x0062EA27, copy_run(0x0062E973)),  # MPFEChooseConnection
