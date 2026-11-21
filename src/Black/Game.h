@@ -691,4 +691,11 @@ template <typename T> inline void GTPointer<T>::SetGameTurnValidated()
 	GameTurnValidated = GGame::g_game->data.GameTurn;
 }
 
+#if defined(VERSION_BW1W130)
+// Descriptive name, owner unknown: set while a dialogue controls the help system, so the glove option's help text
+// reload waits. Read by GGame::Process3dEngine.
+// 1.30: 00d82984
+extern bool32_t HelpTextReloadPending;
+#endif
+
 #endif /* BW1_DECOMP_GAME_INCLUDED_H */

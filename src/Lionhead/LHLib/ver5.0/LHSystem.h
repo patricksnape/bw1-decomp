@@ -466,4 +466,10 @@ inline LH_RETURN LHDraw::OneColorSprite(long x, long y, LHSprite* sprite, LHColo
 	return OneColorSprite24(x, y, sprite, color, flags);
 }
 
+#if defined(VERSION_BW1W130)
+// Descriptive name, owner unknown: set when a P5 glove is present, so the options dialog offers it.
+// 1.30: 00f061e4
+extern bool32_t GloveInstalled;
+#endif
+
 #endif /* BW1_DECOMP_LH_SYSTEM_INCLUDED_H */
